@@ -1,0 +1,23 @@
+@import '../../../../index.sass'
+
+.navbar
+  margin-left: auto
+  list-style: none
+  display: flex
+  &__item
+    padding: 2.5em 1.5em
+    position: relative
+    &::before
+      content: ''
+      position: absolute
+      left: 0
+      top: 0
+      height: 100%
+      width: 2px
+      background-color: #ccc
+      transform: skew(-6deg)
+  &__link
+    text-decoration: none
+    color: $dark-grey
+    padding-top: 10px
+    padding-bottom: 10px

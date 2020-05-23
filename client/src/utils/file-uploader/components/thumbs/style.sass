@@ -1,0 +1,55 @@
+.thumb-bar
+  display: flex
+  flex-direction: row
+  flex-wrap: wrap
+  margin-top: 10px
+  .thumb
+    display: inline-flex
+    position: relative
+    border-radius: 2px
+    border: 1px solid #eaeaea
+    margin-bottom: 8px
+    margin-right: 8px
+    width: 100px
+    height: 100px
+    padding: 4px
+    box-sizing: border-box
+    &__delete
+      display: none
+    &:hover .thumb__delete
+      display: block
+      position: absolute
+      top: -12px
+      right: -12px
+      width: 20px
+      height: 20px
+      border-radius: 50%
+      border: 0
+      background-color: #ddd
+      color: #232323
+      &::after
+        content: '⤫'
+        position: absolute
+        left: 2.5px
+        top: -5px
+        font-size: 19px
+        font-weight: 900
+    &__inner
+      display: flex
+      justify-content: center
+      position: relative
+      min-width: 0
+    .img
+      display: block
+      width: auto
+    .img__loading
+      filter: blur(3px)
+    .spinner
+      position: absolute
+      color: black
+      left: 50%
+      top: 50%
+      margin-top: -20px
+      margin-left: -20px
+    .spinner.hidden
+      display: none

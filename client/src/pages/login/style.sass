@@ -1,0 +1,30 @@
+@import '../../index.sass'
+
+.login
+  &__container
+    display: flex
+    justify-content: space-between
+    width: 640px
+    box-shadow: 10px 10px 10px #ccc
+    margin-left: auto
+    margin-right: auto
+    margin-top: 100px
+    padding: 20px
+    border: 1px solid $dark-grey
+  &__left, &__right
+    width: 270px
+    display: flex
+    flex-direction: column
+  &__title
+    font-weight: 500
+    margin-bottom: 20px
+    text-align: center
+  &__error
+    color: #ee1133
+    margin-bottom: 15px
+  &__button
+    width: 100%
+    margin-top: auto
+  a
+    display: inline-block
+    margin-top: auto
