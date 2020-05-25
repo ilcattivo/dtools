@@ -171,6 +171,10 @@ class AddProduct extends Component {
 
     const newForm = getUpdatedForm(fields, fieldName, 'value', value);
 
+    if (fieldName === 'toolType') {
+      newForm.operationType.value = [];
+    }
+
     this.setState({
       fields: newForm,
     });
