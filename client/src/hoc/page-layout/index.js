@@ -22,7 +22,7 @@ class PageLayout extends Component {
         <TopBanner title={name} descr={descr} img={img} />
         <div className='page-layout__wrapper'>
           <div className='page-layout__left'>
-            {toolTypes && operationTypes && (
+            {toolTypes.length > 0 && operationTypes.length > 0 && (
               <CatalogMenu list={[toolTypes, operationTypes]} />
             )}
           </div>
