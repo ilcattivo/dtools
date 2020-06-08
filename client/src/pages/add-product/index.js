@@ -39,6 +39,8 @@ import DashboardLayout from '../../hoc/dashboard-layout';
 import { materialsList, formStyles } from '../../utils/misc';
 
 import './style.sass';
+import EditSuccess from '../../components/edit-success';
+import EditFailure from '../../components/edit-failure';
 
 const ITEM_HEIGHT = 48;
 const ITEM_PADDING_TOP = 8;
@@ -224,17 +226,16 @@ class AddProduct extends Component {
           />
           <div className='add-product__container'>
             {success && (
-              <p className='add-product__success'>
-                <CheckCircleIcon
-                  style={{ position: 'absolute', left: 0, top: '-2px' }}
-                />
-                Товар успешно добавлен
-              </p>
+              <EditSuccess
+                label='Товар успешно добавлен'
+                className='add-product__success'
+              />
             )}
             {backendErrors && backendErrors.code === 11000 && (
-              <p className='add-product__error'>
-                Уже есть товар с таким названием
-              </p>
+              <EditFailure
+                label='Уже есть товар с таким названием'
+                className='add-product__error'
+              />
             )}
             <form
               noValidate
